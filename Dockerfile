@@ -26,6 +26,8 @@ RUN npm install \
 
 FROM nginx:alpine
 
+LABEL org.opencontainers.image.source=https://github.com/platypod/cyber-chef
+
 COPY --from=builder /app/build/ /usr/share/nginx/html/
 
 EXPOSE 80

@@ -86,6 +86,13 @@ make build VERSION=v10.19.4     # build a specific upstream tag
 The `build` target automatically creates a `platypod-multiarch` buildx builder
 (using the `docker-container` driver) on first run.
 
+> **First publish only — make the package public.** GitHub creates new GHCR
+> packages as **private**. After the very first push, set it public once:
+> `github.com/orgs/platypod/packages` → `cyber-chef` → *Package settings* →
+> *Danger Zone* → *Change visibility* → **Public**. This persists across all
+> future versions — subsequent pushes stay public. There is no REST API for
+> changing package visibility (GitHub limitation), so it's a one-time manual step.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
